@@ -1,0 +1,41 @@
+Create a VM in Microsoft Azure: Basic configuration
+# Step 1
+Log into your Azure account
+# Step 2
+Click on the virtual machines Icon
+		OR
+		# Click the 3 stacked lines icon on the top left of the screen, and scroll down the virtual 
+machines tab
+		OR
+		# Using the search bar at the top of the screen, search for “virtual machines”
+# Step 3
+# Click “Create” under virtual machines, and select which type you want (Azure virtual Machine in this case)
+# Step 4
+#NOTE: (THERE SHOULDN BE GENERAL GUIDANCE TO REFER TO IF THIS VM IS FOR A BUSINESS. IF IT IS FOR PERSONAL USE, ENSURE YOU UNDERSTAND WHAT EACH SETTING IS DOING)
+	# Configure the following settings: 
+	Subscription
+	Resource group
+	Virtual Machine name
+	Region
+	Availability Options (optional)
+	Security Type (optional) 
+	Image
+	VM architecture (this will only give available options)
+	Size (this is very important as it determines cost)
+	Username
+	Password
+	Public Inbound ports/which ports you want to use. (HTTP, HTTPS, SSH, RDP)
+	Licensing
+	# You may consider disabling boot diagnostics if your VM does not require this feature
+# Step 5
+# Click review+create. This will verify that the settings you selected will work, as well as show you the cost per hour for your VM.
+# Step 6
+# When the configuration is complete, you navigate to your VM from the completion screen OR from the notification window
+# Step 7
+	# To Connect to your VM, click connect and select RDP. 
+	# Download the RDP file. Open the file once the download is finished
+	#Click connect. 
+# If you receive the error: (THE IDENTITY OF THE REMOTE COMPUTER CANNOT BE VERIFIED. DO YOU WANT TO CONNECT ANYWAY?) 
+		Click Yes.
+
+# This concludes the basic VM configuration
