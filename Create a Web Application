@@ -1,0 +1,39 @@
+Creating a web app 
+*This guide uses Docker*
+# Log in
+# Step 1
+	# In the top left of the screen, click the Icon with 3 stacked lines to open the dashboard
+	# In the dashboard pane, click on the “All Services” blade
+	# Click the App Services icon, then click + create > + new
+	OR
+#Using the search bar at the top of the screen, type “App Services” and click the App services icon
+# Click the App Services icon, then click + create > + new
+# Step 2
+	# Input your values for the following sections:
+	Subscription
+	Resource Group
+	Name
+	Publish
+	Runtime Stack
+	Operating System
+	Region
+	App Service Plan (Windows or Linux; will depend on the operating system you selected earlier)
+	Sku and size
+Zone redundancy (optional, will affect cost, can only be altered before deployment of the web application)
+# Step 3
+	# Click next > docker (docker displays in this line due to my “publish type” in the step above.)
+	# Supply Values for the following
+	Options
+	Image Source
+	Access Type
+	Image and Tag
+	Startup Command (optional)
+# Step 4
+	# Click review + create, then click create
+# Step 5
+	# When the deployment is complete, navigate to the newly created resource
+	# Under the essentials tab, copy the URL for your web application
+# Step 6
+	# In a new browser window, paste the copied URL and hit enter.
+	# Your new web app should populate
+THIS CONCLUDES THE BASIC CONFIGURATION
