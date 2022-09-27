@@ -1,0 +1,35 @@
+Deploy container Instances
+
+# Login
+# Step 1
+# From the Azure Portal, navigate to container instances by utilizing the search bar at the top of the page and typing “container instances”
+# Click create
+OR
+# Click the dashboard icon on the top left of the page, and scroll to the “All Resources” blade
+# Click Container instances from the list
+# Click create
+# Step 2
+	#Supply Values for the following:
+	Subscription:
+	Resource Group:
+	Container Name:
+	Region:
+	Availability Zones (Optional):
+	Image Type:
+	Image:
+	OS Type:
+	Size:
+	# Then Click next > networking
+# Step 3
+	# On the networking tab, Supply a value fort the following:
+	DNS name label:
+	# Click review + create
+	# Click create
+# Step 4
+	# Once the deployment is complete, navigate to the newly create resource
+	# Verify the container is running
+	# Copy the FQDN to your clipboard
+# Step 6
+	# Open a new browser window, and paste the FQDN from the clipboard
+	# The welcome message should display
+This concludes the basic configuration
