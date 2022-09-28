@@ -1,0 +1,58 @@
+Using CloudShell to manage resources
+# Login
+# Step 1: Setup the shell for use
+	# Click the CloudShell Icon next to the search bar
+	# Select the PowerShell option
+# Step 2: Create Storage
+	# When prompted to create a storage account for the cloud shell instance:
+# 1. Click create storage, and the storage account will be configured automatically (to include name, region etc...)
+OR
+# Click the “Show advanced settings” link next to the subscription box. 
+# Enter the values for 
+Subscription
+Cloud Shell region
+Resource Group
+Storage Account
+File Share
+# Click create
+END
+# Step1: Create a resource group 
+	# Type the following in the shell: 
+	#$location = (Get-AzResourceGroup -Name [INPUT RGNAME]).Location
+#$rgName = '[INPUT RGNAME]'
+#New-AzResourceGroup -Name $rgName -Location $location
+# Step 2: Verify the new resource group poperties
+	#Type the following:
+	#Get-AzResourceGroup -Name $rgName
+	END
+# Step 1: Create a managed disk
+	# Type the following in the shell:
+	#$diskConfig = New-AzDiskConfig `
+-Location $location `
+-CreateOption Empty `
+-DiskSizeGB 32 `
+-Sku Standard_LRS
+#$diskName = 'az104-03c-disk1'
+New-AzDisk `
+-ResourceGroupName $rgName `
+-DiskName $diskName `
+-Disk $diskConfig
+# Step 2: Verify
+	#Get-AzDisk -ResourceGroupName $rgName -Name $diskName
+	END
+# Step 1: Configure the new Disk
+#New-AzDiskUpdateConfig -DiskSizeGB 64 | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+# Step 2: Verify 
+	#Get-AzDisk -ResourceGroupName $rgName -Name $diskName
+	# Verify current SKU:
+	#(Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
+# Step 3: Change disk performance sku
+#New-AzDiskUpdateConfig -Sku Premium_LRS | Update-AzDisk -ResourceGroupName $rgName -DiskName $diskName
+#Verify Changes:
+#(Get-AzDisk -ResourceGroupName $rgName -Name $diskName).Sku
+END
+
+
+
+
+
